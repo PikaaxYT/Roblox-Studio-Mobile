@@ -38,3 +38,11 @@ cp xstartup xstartup.bak
 echo "xstartup file backed up"
 wget https://raw.githubusercontent.com/PikaaxYT/Roblox-Studio-Mobile/master/xstartup
 cd ~/
+echo "Installing NoVNC..."
+git clone https://github.com/novnc/noVNC.git
+sudo apt-get install -q -y python3-pip
+pip3 install numpy
+cd noVNC
+openssl req -new -x509 -days 365 -nodes -out self.pem -keyout self.pem
+wget https://raw.githubusercontent.com/PikaaxYT/Roblox-Studio-Mobile/main/startvnc.sh
+chmod u+x startvnc.sh
