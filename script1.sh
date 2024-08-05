@@ -36,4 +36,5 @@ vncserver
 cd .vnc
 cp xstartup xstartup.bak
 echo "xstartup file backed up"
-vim xstartup
+wget https://raw.githubusercontent.com/PikaaxYT/Roblox-Studio-Mobile/master/xstartup
+cd ~/
