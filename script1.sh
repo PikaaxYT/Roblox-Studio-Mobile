@@ -2,6 +2,15 @@ echo "Installing UFW (firewall)..."
 sudo apt -q -y install ufw
 echo "Installing XFCE..."
 sudo apt -q -y install xfce4 xfce4-goodies
+echo "Installing ngrok..."
+curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc \
+	| sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null \
+	&& echo "deb https://ngrok-agent.s3.amazonaws.com buster main" \
+	| sudo tee /etc/apt/sources.list.d/ngrok.list \
+	&& sudo apt update -q -y \
+	&& sudo apt install -q -y ngrok
+read -p "Paste your ngrok authtoken here:" authtoken
+ngrok config add-authtoken $authtoken
 echo "Setting up Firefox's prerequisites..."
 sudo add-apt-repository ppa:mozillateam/ppa
 echo '
