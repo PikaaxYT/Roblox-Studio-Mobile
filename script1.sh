@@ -44,7 +44,6 @@ sudo apt-get install -q -y python3-pip
 pip3 install numpy
 cd noVNC
 openssl req -new -x509 -days 365 -nodes -out self.pem -keyout self.pem
-wget https://raw.githubusercontent.com/PikaaxYT/Roblox-Studio-Mobile/main/startvnc.sh
-chmod u+x startvnc.sh
+screen
 sudo vncserver :1 -geometry 1280x1024 -depth 32
 ngrok tcp 5901
