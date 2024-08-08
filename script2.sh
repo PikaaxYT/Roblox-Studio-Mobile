@@ -1,6 +1,6 @@
 cd ~/
 sudo mkdir /mnt/sdb1
-mnt /dev/sdb1 /mnt/sdb1
+sudo mount /dev/sdb1 /mnt/sdb1
 sudo chmod 777 /mnt/sdb1
 cd /mnt/sdb1
 echo "Installing ngrok..."
