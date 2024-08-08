@@ -1,3 +1,8 @@
+cd ~/
+sudo mkdir /mnt/sdb1
+mnt /dev/sdb1 /mnt/sdb1
+sudo chmod 777 /mnt/sdb1
+cd /mnt/sdb1
 echo "Installing ngrok..."
 curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc \
 	| sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null \
@@ -5,8 +10,7 @@ curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc \
 	| sudo tee /etc/apt/sources.list.d/ngrok.list \
 	&& sudo apt update -q -y \
 	&& sudo apt install -q -y ngrok
-read -p "Paste your ngrok authtoken here:" authtoken
-ngrok config add-authtoken $authtoken
+ngrok config add-authtoken 1tFgYaSEvTxLaqvJNHrJdyb8tQY_2N6EzW7tianaiHUZnpgoB
 echo "Installing QEMU..."
 sudo apt install -q -y qemu-system
 wget https://computernewb.com/isos/windows/Win8.1_English_x64.iso
