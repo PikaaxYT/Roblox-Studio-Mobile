@@ -1,1 +1,1 @@
-Using Google Cloud Shell I want to see if it is possible to use Roblox Studio on a mobile device
+Just some testing with Linux VPS to see if by some way I can get Roblox Studio running on mobile devices
