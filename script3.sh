@@ -8,6 +8,7 @@ curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc \
 ngrok config add-authtoken 1tFgYaSEvTxLaqvJNHrJdyb8tQY_2N6EzW7tianaiHUZnpgoB
 echo "Installing QEMU..."
 sudo apt install -q -y qemu-system
+sudo apt-install -q -y qemu-kvm
 echo "Downloading Windows..."
 wget https://computernewb.com/isos/windows/Win8.1_English_x64.iso
 echo "Creating virtual disk..."
